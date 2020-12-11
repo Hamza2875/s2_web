@@ -1,0 +1,24 @@
+extends ../layout
+
+block content
+    h1 Add New Novel
+    form(action="/novels/add",method="post")
+        .form-group
+            label(for="FName") Author Name
+            input#FName(type="text", class="form-control", name="FName")
+        .form-group
+            label(for="Email") Email
+            input#Email(type="text", class="form-control", name="Email")
+        .form-group
+            label(for="City") City
+            input#City(type="text", class="form-control", name="City")
+        .form-group
+            label(for="Country") Country
+            input#Country(type="text", class="form-control", name="Country")
+        .form-group
+            label(for="Novel_name") Novel Name
+            input#Novel_name(type="text", class="form-control", name="Novel_name")
+        .form-group
+            label(for="Genre") Novel Genre
+            input#Genre(type="text", class="form-control", name="Genre")
+        input(type="submit", class="btn btn-info")

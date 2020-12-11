@@ -1,0 +1,31 @@
+extends ../layout
+
+block content
+    .row
+        .col-sm-8
+            h1=title
+        .col-sm-4
+            a(href="/novels/add", class="btn btn-success float-right") Add New Novel
+    table.table
+        thead
+            tr
+                th Author Name
+                th Email
+                th City
+                th Country
+                th Novel name
+                th Genre
+                th Actions
+        tbody
+            each novel in novels
+                tr
+                    td=novel.FName
+                    td=novel.Email
+                    td=novel.City
+                    td=novel.Country
+                    td=novel.Novel_name
+                    td=novel.Genre
+                    td
+                        a(href="/novels/delete/"+novel._id, class="btn btn-danger") Delete
+                        a(href="/novels/edit/"+novel._id, class="btn btn-warning") Edit
+                        a(href="/novels/cart/"+novel._id, class="btn btn-info") Add To Cart
